@@ -1,0 +1,50 @@
+@import  "./styles/reset.scss";
+@import  "./styles/fonts.scss";
+@import  "./styles/var.scss";
+@import "./styles/header.scss";
+@import "./styles/slider.scss";
+@import "./styles/sidebar.scss";
+@import "./styles/books.scss";
+
+
+html{
+	box-sizing: border-box;
+}
+
+*, *::before, *::after{
+	box-sizing: inherit;
+}
+
+.body{
+	position: relative;
+}
+
+.main-wrapper{
+	position: relative;
+	border: 1px solid green;
+	height: fit-content;
+}
+a, li{
+	text-decoration: none;
+}
+
+button{
+	border: none;
+}
+
+button, img, a{
+	cursor: pointer;
+}
+
+@media (min-width: 767px){
+	.main-wrapper{
+		margin: 0 auto;
+		width: 700px;
+	}
+}
+@media (min-width: 1100px){
+	.main-wrapper{
+		width: 900px;
+	}
+}
+

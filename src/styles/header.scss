@@ -1,0 +1,147 @@
+.header {
+	z-index: 2;
+	border: 1px solid black;
+	&.header-poz-fixed{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background-color: pink;
+	}
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+		.logo{
+			.img-logo {
+				width: 70px;
+				margin: auto 10px;
+			}
+		}
+    .header-navigation {
+      display: none;
+    }
+    .header-research-bar {
+      display: flex;
+      width: 70px;
+			justify-content: space-between;
+      .icon {
+				margin: auto 0;
+        width: 10px;
+        height: 10px;
+      }
+			.bag{
+				position: relative;
+				width: 15px;
+				height: 17px;
+				.icon{
+					width: 15px;
+					height: 15px;
+				}
+				.circle{
+					width: 8px;
+					height: 8px;
+					text-align: center;
+					border: 1px solid #FF353A;
+					border-radius: 50%;
+					background-color: #FF353A;
+					color: #FFF;
+					font-family: Montserrat;
+					font-size: 6px;
+					
+					font-weight: 500;
+					position: absolute;
+					top: 10px;
+					left: 10px;
+				}
+			}
+    }
+    .burger-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 18px;
+      height: 18px;
+			margin: 10px;
+			
+			.burger-line {
+				display: block;
+				width: 100%;
+				height: 2px;
+				background-color: #1c2a39;
+			}
+		}
+  }
+}
+
+/* mobiles */
+@media (min-width: 480px) {
+  .header {
+    .header-wrapper {
+      .header-navigation {
+        display:flex;
+        ul {
+          display: flex;
+					li {
+						margin: 0 10px;
+						text-transform: uppercase;
+						a {
+							color: #5c6a79;
+							font-family: Montserrat;
+							font-size: 8px;
+							line-height: 36px;
+							font-weight: 700;
+							&.active{
+								color: $black-font;
+								font-size: 9px;
+								font-weight: 900;
+							}
+							&.blog{
+								margin-right: 0;
+							}
+						}
+					}
+        }
+      }
+      .header-research-bar {
+				margin-right: 15px;
+      }
+			.burger-menu {
+        display: none;
+        .burger-line {
+          display: none;
+        }
+      }
+    }
+  }
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) {
+	.header{
+			.header-wrapper{
+				.header-navigation {
+					ul{
+						li{
+							margin: 0 30px;
+							a{
+								font-size: 10px;
+								&.active{
+									font-size: 11px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+/* Large desktops and laptops */
+@media (min-width: 1199px){
+	.header{
+		.header-wrapper{
+			.header-research-bar {
+				width: 90px;
+			}
+		}
+	}
+}
